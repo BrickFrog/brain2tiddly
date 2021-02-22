@@ -33,7 +33,7 @@ class TiddlyNote:
         # TODO - this is stripping off last 3 chars as .md, might not
         # be as relevant once introducing new filetypes
         name = self.title[:-3]
-        filename = f'../tiddlers/{name}.tid'
+        filename = f'tiddlers/{name}.tid'
         
         if not os.path.exists(os.path.dirname(filename)):
             try:
@@ -130,4 +130,4 @@ def file_parser(listed_files: List):
 
 if __name__ == "__main__":
     # End goal would be to turn this into a CLI
-    file_parser(list_files('../vault'))
+    file_parser(list_files('vault'))
